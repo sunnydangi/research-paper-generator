@@ -224,7 +224,3 @@ For support, please:
 - Open-source community for various tools and libraries
 
 ---
-
-Created with dedication by [Tarun Gautam](https://github.com/tarunerror)
-
-Copyright © 2025 ThinkTome. All rights reserved.
