@@ -66,8 +66,8 @@ By participating in this project, you agree to abide by our Code of Conduct. We 
 
 3. Create `.env` file with required environment variables:
    ```
-   # Mistral AI API Key
-   VITE_MISTRAL_API_KEY=your_mistral_api_key
+   # openrouter AI API Key
+   VITE_openrouter_API_KEY=your_openrouter_api_key
    
    # Firebase Configuration
    VITE_FIREBASE_API_KEY=your_firebase_api_key

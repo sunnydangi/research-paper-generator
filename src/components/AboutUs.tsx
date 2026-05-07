@@ -226,7 +226,7 @@ export function AboutUs({ onBack }: AboutUsProps) {
                 { name: 'React', desc: 'Frontend Framework', gradient: 'from-blue-500 to-cyan-400' },
                 { name: 'TypeScript', desc: 'Language', gradient: 'from-blue-600 to-blue-400' },
                 { name: 'Tailwind CSS', desc: 'Styling', gradient: 'from-teal-500 to-emerald-400' },
-                { name: 'Mistral AI', desc: 'AI Integration', gradient: 'from-purple-500 to-pink-400' },
+                { name: 'openRouter AI', desc: 'AI Integration', gradient: 'from-purple-500 to-pink-400' },
                 { name: 'Three.js', desc: '3D Graphics', gradient: 'from-red-500 to-orange-400' },
                 { name: 'Node.js', desc: 'Runtime', gradient: 'from-green-500 to-emerald-400' },
                 { name: 'Vite', desc: 'Build Tool', gradient: 'from-yellow-500 to-amber-400' },

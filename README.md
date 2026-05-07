@@ -12,7 +12,7 @@ ThinkTome is a sophisticated web application that revolutionizes academic resear
 ## Core Features
 
 ### Advanced AI Integration
-- Powered by Mistral AI for intelligent paper generation
+- Powered by openrouter AI for intelligent paper generation
 - Smart template selection based on research type
 - Automatic source verification and citation
 - Real-time progress tracking
@@ -58,7 +58,7 @@ ThinkTome is a sophisticated web application that revolutionizes academic resear
 ### AI & Integration
 ```typescript
 {
-  "AI Engine": "Mistral AI",
+  "AI Engine": "openrouter AI",
   "Authentication": "Firebase",
   "Email Service": "Nodemailer",
   "API Handling": "Axios + Retry",
@@ -98,8 +98,8 @@ src/
 
 3. Create `.env` file with required environment variables:
    ```env
-   # Mistral AI API Key
-   VITE_MISTRAL_API_KEY=your_mistral_api_key
+   # openrouter AI API Key
+   VITE_openrouter_API_KEY=your_openrouter_api_key
    
    # Firebase Configuration
    VITE_FIREBASE_API_KEY=your_firebase_api_key
@@ -219,7 +219,7 @@ For support, please:
 
 ## Acknowledgments
 
-- Mistral AI for providing the AI capabilities
+- openrouter AI for providing the AI capabilities
 - Academic sources for research data
 - Open-source community for various tools and libraries
 

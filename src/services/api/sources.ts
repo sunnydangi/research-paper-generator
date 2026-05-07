@@ -55,7 +55,6 @@ const axiosInstance = axios.create({
   timeout: 30000, // 30 seconds timeout
   headers: {
     'Accept': 'application/json, application/xml',
-    'User-Agent': 'Research-Paper-Generator/1.0'
   }
 });
 

@@ -6,7 +6,6 @@ export const apiClient = axios.create({
   timeout: 30000, // 30 seconds timeout
   headers: {
     'Accept': 'application/json, application/xml',
-    'User-Agent': 'ThinkTome/1.0'
   }
 });
 

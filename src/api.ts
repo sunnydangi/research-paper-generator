@@ -1,4 +1,4 @@
-import MistralClient from '@mistralai/mistralai';
+import OpenAI from 'openai';
 import axios from 'axios';
 import { XMLParser } from 'fast-xml-parser';
 import type { ResearchSource, ResearchImage } from './types';
@@ -69,7 +69,7 @@ const PUBMED_API_URL = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fc
 const SEMANTIC_SCHOLAR_API_URL = 'https://api.semanticscholar.org/graph/v1/paper/search';
 const GOOGLE_SCHOLAR_SEARCH_URL = 'https://scholar.google.com/scholar';
 
-const mistral = new MistralClient(import.meta.env.VITE_MISTRAL_API_KEY);
+const openRouter = new OpenAI({ baseURL: 'https://openrouter.ai/api/v1', apiKey: import.meta.env.VITE_OPENROUTER_API_KEY, dangerouslyAllowBrowser: true });
 
 const sanitizeText = (text: string | null | undefined): string => {
   if (!text || typeof text !== 'string') return '';
@@ -299,8 +299,8 @@ const extractJSONFromText = (text: string): ImageSuggestion[] => {
 
 const generateImageDescription = async (topic: string): Promise<ResearchImage[]> => {
   try {
-    const response = await mistral.chat({
-      model: "mistral-large-latest",
+    const response = await openRouter.chat.completions.create({
+      model: "nvidia/nemotron-3-nano-30b-a3b:free",
       messages: [
         {
           role: "user",
@@ -376,8 +376,8 @@ Response must be a valid JSON array only.`
 };
 
 export const generatePaper = async (topic: string, wikiSummary: string): Promise<string> => {
-  if (!import.meta.env.VITE_MISTRAL_API_KEY) {
-    throw new Error('Mistral API key is not configured');
+  if (!import.meta.env.VITE_OPENROUTER_API_KEY) {
+    throw new Error('OpenRouter API key is not configured');
   }
 
   try {
@@ -409,8 +409,8 @@ export const generatePaper = async (topic: string, wikiSummary: string): Promise
     ];
 
     const sectionPromises = sections.map(async (section) => {
-      const response = await mistral.chat({
-        model: "mistral-large-latest",
+      const response = await openRouter.chat.completions.create({
+        model: "nvidia/nemotron-3-nano-30b-a3b:free",
         messages: [
           {
             role: "user",
@@ -430,8 +430,8 @@ export const generatePaper = async (topic: string, wikiSummary: string): Promise
     });
 
     const [referencesResponse, images] = await Promise.all([
-      mistral.chat({
-        model: "mistral-large-latest",
+      openRouter.chat.completions.create({
+        model: "nvidia/nemotron-3-nano-30b-a3b:free",
         messages: [
           {
             role: "user",
@@ -460,7 +460,7 @@ export const generatePaper = async (topic: string, wikiSummary: string): Promise
     
     if (error instanceof Error) {
       if (error.message.includes('401')) {
-        throw new Error('Invalid API key. Please check your Mistral API key configuration.');
+        throw new Error('Invalid API key. Please check your OpenRouter API key configuration.');
       } else if (error.message.includes('429')) {
         throw new Error('Rate limit exceeded. Please try again later.');
       }

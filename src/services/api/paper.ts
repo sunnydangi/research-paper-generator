@@ -1,4 +1,4 @@
-import MistralClient from '@mistralai/mistralai';
+import OpenAI from 'openai';
 import { fetchArxivPapers, fetchPubMedPapers, fetchSemanticScholarPapers } from './sources';
 import { generateImageDescription } from './images';
 import { generateSectionPrompt } from './prompts';
@@ -6,7 +6,7 @@ import { serializeError } from '../../utils/errors';
 import { searchGitHubRepositories } from './topics';
 import { getResearchTemplate } from '../../utils/researchTemplates';
 
-const mistral = new MistralClient(import.meta.env.VITE_MISTRAL_API_KEY);
+const openRouter = new OpenAI({ baseURL: 'https://openrouter.ai/api/v1', apiKey: import.meta.env.VITE_OPENROUTER_API_KEY, dangerouslyAllowBrowser: true });
 
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 2000;
@@ -24,8 +24,8 @@ async function retryOperation<T>(operation: () => Promise<T>, retries = MAX_RETR
 }
 
 export const generatePaper = async (topic: string, wikiSummary: string): Promise<string> => {
-  if (!import.meta.env.VITE_MISTRAL_API_KEY) {
-    throw new Error('Mistral API key is not configured');
+  if (!import.meta.env.VITE_OPENROUTER_API_KEY) {
+    throw new Error('OpenRouter API key is not configured');
   }
 
   try {
@@ -65,8 +65,8 @@ Topics: ${repo.topics.join(', ')}`)
       return retryOperation(async () => {
         const prompt = generateSectionPrompt(topic, section.id, wikiSummary + githubContext, academicSources);
         
-        const response = await mistral.chat({
-          model: "mistral-large-latest",
+        const response = await openRouter.chat.completions.create({
+          model: "nvidia/nemotron-3-nano-30b-a3b:free",
           messages: [
             {
               role: "system",
@@ -113,7 +113,7 @@ Topics: ${repo.topics.join(', ')}`)
     
     if (error instanceof Error) {
       if (error.message.includes('401')) {
-        throw new Error('Invalid API key. Please check your Mistral API key configuration.');
+        throw new Error('Invalid API key. Please check your OpenRouter API key configuration.');
       } else if (error.message.includes('429')) {
         throw new Error('Rate limit exceeded. Please try again later.');
       } else if (error.message.includes('Max retries')) {

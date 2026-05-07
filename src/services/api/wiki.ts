@@ -10,7 +10,6 @@ const wikiAxios = axios.create({
   timeout: 10000,
   headers: {
     'Accept': 'application/json',
-    'User-Agent': 'Research-Paper-Generator/1.0'
   }
 });
 

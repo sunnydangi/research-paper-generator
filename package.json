@@ -15,7 +15,6 @@
     "test:run": "vitest run"
   },
   "dependencies": {
-    "@mistralai/mistralai": "^0.0.10",
     "@react-three/drei": "^9.99.0",
     "@react-three/fiber": "^8.15.16",
     "axios": "^1.6.7",
@@ -29,6 +28,7 @@
     "lucide-react": "^0.344.0",
     "natural": "^8.1.0",
     "nlp-compromise": "^7.0.0",
+    "openai": "^6.37.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.4",

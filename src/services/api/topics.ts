@@ -1,11 +1,11 @@
-import MistralClient from '@mistralai/mistralai';
+import OpenAI from 'openai';
 import type { Topic } from '../../types';
 import { serializeError } from '../../utils/errors';
 import { extractJSONFromText } from '../../utils/json';
 import { researchTopics } from '../../topics';
 import { apiClient } from './axios';
 
-const mistral = new MistralClient(import.meta.env.VITE_MISTRAL_API_KEY);
+const openRouter = new OpenAI({ baseURL: 'https://openrouter.ai/api/v1', apiKey: import.meta.env.VITE_OPENROUTER_API_KEY, dangerouslyAllowBrowser: true });
 const GITHUB_API_URL = 'https://api.github.com';
 
 interface GitHubSearchResult {
@@ -19,13 +19,13 @@ interface GitHubSearchResult {
 }
 
 export async function generateResearchTopics(): Promise<Topic[]> {
-  if (!import.meta.env.VITE_MISTRAL_API_KEY) {
+  if (!import.meta.env.VITE_OPENROUTER_API_KEY) {
     return getRandomTopics(3);
   }
 
   try {
-    const response = await mistral.chat({
-      model: "mistral-large-latest",
+    const response = await openRouter.chat.completions.create({
+      model: "nvidia/nemotron-3-nano-30b-a3b:free",
       messages: [
         {
           role: "system",
