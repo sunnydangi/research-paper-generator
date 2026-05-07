@@ -56,7 +56,7 @@ export function Header({ onAboutClick, onHomeClick }: HeaderProps) {
               About Us
             </button>
             <a 
-              href="https://github.com/tarunerror/thinktome/issues"
+              href="https://github.com/sunnydangi/research-paper-generator/issues"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white smooth-transition flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-700/50 group"
@@ -136,7 +136,7 @@ export function Header({ onAboutClick, onHomeClick }: HeaderProps) {
                 About Us
               </button>
               <a 
-                href="https://github.com/tarunerror/thinktome/issues"
+                href="https://github.com/sunnydangi/research-paper-generator/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white smooth-transition flex items-center space-x-2 py-2.5 px-3 rounded-lg hover:bg-gray-700/50 font-medium"

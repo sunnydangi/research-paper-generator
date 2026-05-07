@@ -242,7 +242,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Send email to admin (you)
     await transporter.sendMail({
       from: `"ThinkTome Contact Form" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_TO_EMAIL || 'its.tarun01@gmail.com',
+      to: process.env.SMTP_TO_EMAIL || 'dangisunny110@gmail.com',
       replyTo: reply_to,
       subject: `[ThinkTome] New message from ${from_name}: ${subject}`,
       text: `New contact form submission from ${from_name} (${reply_to})\n\nSubject: ${subject}\n\nMessage:\n${message}`,

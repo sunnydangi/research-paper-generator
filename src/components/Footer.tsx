@@ -1,4 +1,4 @@
-import { Github, Mail, Heart, ExternalLink, Sparkles } from 'lucide-react';
+import { Github, Mail, ExternalLink, Sparkles } from 'lucide-react';
 import { Logo } from './Logo';
 
 interface FooterProps {
@@ -12,7 +12,7 @@ export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
   return (
     <footer className="glass-stronger border-t border-gray-700/50 py-12 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
           {/* Logo and Description */}
           <div className="space-y-5">
             <div className="flex items-center space-x-3 group">
@@ -33,7 +33,7 @@ export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
             </p>
             <div className="flex space-x-4 pt-2">
               <a
-                href="https://github.com/tarunerror/thinktome"
+                href="https://github.com/sunnydangi/research-paper-generator"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 glass rounded-lg hover:glass-stronger smooth-transition group"
@@ -42,7 +42,7 @@ export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
                 <Github className="h-5 w-5 text-gray-400 group-hover:text-white smooth-transition" />
               </a>
               <a
-                href="mailto:its.tarun01@gmail.com"
+                href="mailto:dangisunny110@gmail.com"
                 className="p-2 glass rounded-lg hover:glass-stronger smooth-transition group"
                 title="Email"
               >
@@ -60,7 +60,7 @@ export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="https://github.com/tarunerror/thinktome"
+                  href="https://github.com/sunnydangi/research-paper-generator"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white smooth-transition flex items-center group"
@@ -72,7 +72,7 @@ export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
               </li>
               <li>
                 <a 
-                  href="mailto:its.tarun01@gmail.com"
+                  href="mailto:dangisunny110@gmail.com"
                   className="text-gray-400 hover:text-white smooth-transition flex items-center group"
                 >
                   <Mail className="h-4 w-4 mr-2.5 group-hover:scale-110 smooth-transition" />
@@ -81,28 +81,6 @@ export function Footer({ onPrivacyClick, onTermsClick }: FooterProps) {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Support Section */}
-          <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-5 flex items-center gap-2">
-              <div className="h-1 w-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full" />
-              Support
-            </h3>
-            <div className="space-y-4">
-              <p className="text-sm text-gray-400 leading-relaxed">
-                If ThinkTome has been valuable to your research journey, consider supporting the project to help us continue innovation and improvement.
-              </p>
-              <a
-                href="https://github.com/sponsors/tarunerror"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-5 py-2.5 btn-gradient-purple text-white rounded-xl text-sm font-semibold group"
-              >
-                <Heart className="h-4 w-4 mr-2 text-pink-300 group-hover:scale-125 smooth-transition" />
-                <span>Sponsor Project</span>
-              </a>
-            </div>
           </div>
         </div>
 

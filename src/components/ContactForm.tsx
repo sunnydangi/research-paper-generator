@@ -67,7 +67,7 @@ export function ContactForm() {
         onSubmit={handleSubmit}
         className="space-y-6"
       >
-        <input type="hidden" name="to_email" value="its.tarun01@gmail.com" />
+        <input type="hidden" name="to_email" value="dangisunny110@gmail.com" />
         
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">

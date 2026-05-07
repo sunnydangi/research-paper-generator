@@ -7,7 +7,7 @@ ThinkTome is a sophisticated web application that revolutionizes academic resear
 [![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-[View Live Demo](https://thinktome.netlify.app) | [Report Bug](https://github.com/tarunerror/thinktome/issues) | [Request Feature](https://github.com/tarunerror/thinktome/issues)
+[View Live Demo](https://thinktome.netlify.app) | [Report Bug](https://github.com/sunnydangi/research-paper-generator/issues) | [Request Feature](https://github.com/sunnydangi/research-paper-generator/issues)
 
 ## Core Features
 
@@ -87,8 +87,8 @@ src/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tarunerror/thinktome.git
-   cd thinktome
+   git clone https://github.com/sunnydangi/research-paper-generator.git
+   cd research-paper-generator
    ```
 
 2. Install dependencies:
@@ -115,7 +115,7 @@ src/
    SMTP_SECURE=false
    SMTP_USER=your_email@gmail.com
    SMTP_PASS=your_app_specific_password
-   SMTP_TO_EMAIL=its.tarun01@gmail.com
+   SMTP_TO_EMAIL=dangisunny110@gmail.com
    ```
 
 4. Start development server:
@@ -214,7 +214,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support, please:
 - Open an issue on GitHub
-- Contact via email: its.tarun01@gmail.com
+- Contact via email: dangisunny110@gmail.com
 - Visit our documentation
 
 ## Acknowledgments

@@ -69,7 +69,7 @@ Required environment variables for the email service:
 - `SMTP_SECURE` - Use TLS (true/false)
 - `SMTP_USER` - SMTP username/email
 - `SMTP_PASS` - SMTP password/app-specific password
-- `SMTP_TO_EMAIL` - Recipient email address (optional, defaults to its.tarun01@gmail.com)
+- `SMTP_TO_EMAIL` - Recipient email address (optional, defaults to dangisunny110@gmail.com)
 
 ### Rate Limiting
 

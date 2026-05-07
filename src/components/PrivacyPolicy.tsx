@@ -72,11 +72,11 @@ export function PrivacyPolicy({ onBack }: PrivacyPolicyProps) {
             <div className="pt-4 border-t border-gray-700">
               <h2 className="text-lg font-semibold text-white mb-3">Questions?</h2>
               <a 
-                href="mailto:its.tarun01@gmail.com"
+                href="mailto:dangisunny110@gmail.com"
                 className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
               >
                 <Mail className="h-5 w-5 mr-2" />
-                its.tarun01@gmail.com
+                dangisunny110@gmail.com
               </a>
             </div>
           </div>

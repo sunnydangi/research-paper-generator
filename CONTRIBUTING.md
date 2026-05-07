@@ -16,7 +16,7 @@ By participating in this project, you agree to abide by our Code of Conduct. We 
 
 ### Reporting Bugs
 
-1. Check if the bug has already been reported in the [Issues](https://github.com/tarunerror/thinktome/issues)
+1. Check if the bug has already been reported in the [Issues](https://github.com/sunnydangi/research-paper-generator/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Steps to reproduce
@@ -83,7 +83,7 @@ By participating in this project, you agree to abide by our Code of Conduct. We 
    SMTP_SECURE=false
    SMTP_USER=your_email@gmail.com
    SMTP_PASS=your_app_specific_password
-   SMTP_TO_EMAIL=its.tarun01@gmail.com
+   SMTP_TO_EMAIL=dangisunny110@gmail.com
    ```
 
 4. Start development server:

@@ -61,7 +61,7 @@ export function AboutUs({ onBack }: AboutUsProps) {
   ];
 
   useEffect(() => {
-    fetch('https://api.github.com/users/tarunerror')
+    fetch('https://api.github.com/users/sunnydangi')
       .then(response => response.json())
       .then(data => {
         setGithubAvatar(data.avatar_url);
@@ -179,20 +179,20 @@ export function AboutUs({ onBack }: AboutUsProps) {
                 </div>
               ) : (
                 <img 
-                  src={githubAvatar || 'https://avatars.githubusercontent.com/u/tarunerror'}
-                  alt="Tarun Gautam"
+                  src={githubAvatar || 'https://avatars.githubusercontent.com/u/sunnydangi'}
+                  alt="Sunny"
                   className="w-32 h-32 rounded-full object-cover border-4 border-primary-500 shadow-lg shadow-primary-500/20"
                 />
               )}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Tarun Gautam</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Sunny</h3>
                 <p className="text-primary-400 font-medium mb-4">Lead Developer</p>
                 <p className="text-gray-300 mb-6 max-w-2xl">
                   Passionate about creating innovative solutions that make academic research more accessible and efficient. Specializing in AI-driven applications and full-stack development with a focus on user experience and performance optimization.
                 </p>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com/tarunerror/thinktome"
+                    href="https://github.com/sunnydangi/research-paper-generator"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors text-white"
